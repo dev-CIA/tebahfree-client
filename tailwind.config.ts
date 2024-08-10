@@ -33,6 +33,79 @@ const config: Config = {
         pretendard: ['var(--font-pretendard)'],
         inter: ['var(--font-inter'],
       },
+      fontSize: {
+        H1_30_Bold: [
+          '1.875rem', //30px
+          {
+            fontWeight: 700,
+            letterSpacing: '-0.003em',
+            lineHeight: '2.25rem', //36px
+          },
+        ],
+        H2_26_Bold: [
+          '1.625rem', // 26px
+          {
+            fontWeight: 700,
+            lineHeight: '2rem', // 32px
+          },
+        ],
+        H3_24_Bold: [
+          '1.5rem', // 24px
+          {
+            fontWeight: 700,
+            lineHeight: '1.875rem', //30px
+          },
+        ],
+        H4_22_Bold: [
+          '1.375rem', //22px
+          {
+            fontWeight: 700,
+            lineHeight: '1.75rem', // 28px
+          },
+        ],
+        H5_20_Bold: [
+          '1.25rem', //20px
+          {
+            fontWeight: 700,
+            lineHeight: '1.625rem', //26px
+          },
+        ],
+        H6_18_Bold: [
+          '1.125rem', //18px
+          {
+            fontWeight: 700,
+            lineHeight: '1.5rem', //24px
+          },
+        ],
+        B1_18_Regular: [
+          '1.125rem', //18px
+          {
+            fontWeight: 400,
+            lineHeight: '1.5rem', //24px
+          },
+        ],
+        B2_15_Regular: [
+          '1rem', //16px
+          {
+            fontWeight: 700,
+            lineHeight: '1.375rem', //22px
+          },
+        ],
+        B3_14_Regular: [
+          '0.875rem', //14px
+          {
+            fontWeight: 700,
+            lineHeight: '1.25rem', //20px
+          },
+        ],
+        B4_12_Regular: [
+          '0.75rem', //12px
+          {
+            fontWeight: 400,
+            lineHeight: '1.125rem', //18px
+          },
+        ],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
