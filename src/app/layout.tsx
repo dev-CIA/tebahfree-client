@@ -16,6 +16,7 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: 'Tebah Free | 은혜광성교회 청년부',
   description: '은혜광성교회 청년부 Tebah free 공동체',
+  metadataBase: new URL('https://tebahfree-web.vercel.app'),
 }
 
 export default function RootLayout({
