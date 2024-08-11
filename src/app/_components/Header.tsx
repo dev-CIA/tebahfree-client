@@ -11,9 +11,9 @@ export const Header = () => {
       </div>
       <div className="relative">
         <div className="absolute left-6 top-14">
-          <div className="text-g-white text-3xl font-light">은헤광성교회</div>
-          <div className="text-g-white text-3xl font-bold">청년부</div>
-          <div className="text-g-white mt-4 whitespace-pre-line text-sm font-light">
+          <div className="text-3xl font-light text-g-white">은헤광성교회</div>
+          <div className="text-3xl font-bold text-g-white">청년부</div>
+          <div className="mt-4 whitespace-pre-line text-sm font-light text-g-white">
             {`은혜광성교회 청년부는 진리를 통해 자유함을 누리는\n청년들의 공동체 입니다`}
           </div>
         </div>
