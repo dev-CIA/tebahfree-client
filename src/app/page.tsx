@@ -1,10 +1,12 @@
-import { Header } from './_components'
+import { Header, SectionButtons } from './_components'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen flex-col items-center justify-between">main</main>
+      <main className="mt-[3.75rem] flex min-h-screen flex-col items-center">
+        <SectionButtons />
+      </main>
     </>
   )
 }
