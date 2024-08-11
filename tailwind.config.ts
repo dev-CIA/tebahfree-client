@@ -88,14 +88,14 @@ const config: Config = {
         B2_15_Regular: [
           '1rem', //16px
           {
-            fontWeight: 700,
+            fontWeight: 400,
             lineHeight: '1.375rem', //22px
           },
         ],
         B3_14_Regular: [
           '0.875rem', //14px
           {
-            fontWeight: 700,
+            fontWeight: 400,
             lineHeight: '1.25rem', //20px
           },
         ],
