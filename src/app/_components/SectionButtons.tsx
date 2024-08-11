@@ -21,7 +21,10 @@ export const SectionButtons = () => {
         <Button
           key={`${value}-${index}`}
           variant={selectedBtn === value ? 'default' : 'secondary'}
-          size={'chip'}>
+          size={'chip'}
+          onClick={() => {
+            setSelectedBtn(value)
+          }}>
           {label}
         </Button>
       ))}
