@@ -1,15 +1,16 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: ['class'],
+  content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        brand: {
+        b: {
           orange: '#FF530F',
           navy: '#1C224E',
         },
-        gray: {
+        g: {
           black: '#0B0D0F',
           white: '#FFFFFF',
           800: '#5B5C63',
@@ -20,7 +21,7 @@ const config: Config = {
           200: '#F7F8FA',
           100: '#F9FAFC',
         },
-        text: {
+        t: {
           600: '#0B0D0F',
           500: '#5B5C63',
           400: '#868A93',
@@ -105,6 +106,20 @@ const config: Config = {
             lineHeight: '1.125rem', //18px
           },
         ],
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
