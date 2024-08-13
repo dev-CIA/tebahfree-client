@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import man_woman from '../../../public/man_woman.png'
 import organization from '../../../public/organization.png'
+import table_meeting from '../../../public/table_meeting.png'
 import worshipHand from '../../../public/worshipHand.png'
 
 import { SectionButtons } from '.'
@@ -33,6 +35,32 @@ export const Main = () => {
           </Button>
         </CardContent>
       </Card>
+      <div className="flex flex-col gap-6">
+        <Card className="bg-gradient-to-b from-[#9FB5EF] to-[#8292BB]">
+          <CardHeader className="text-g-white">
+            <CardTitle className="text-H2_26_Bold">순 모임</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center gap-[0.4375rem]">
+            <Image src={table_meeting} alt="worship image" />
+            <p className="text-B3_14_Regular text-g-200">
+              청년부 예배 이후 청년 1부, 2부로 나뉘어 말씀과 삶을 나누는 공동체 모임입니다. 4개의
+              순(일반순3/ 새가족순1)으로 이루어져 있습니다.
+            </p>
+          </CardContent>
+        </Card>
+        <Card className="bg-gradient-to-b from-[#9FC9EF] to-[#829CBB]">
+          <CardHeader className="text-g-white">
+            <CardTitle className="text-H2_26_Bold">새가족순</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center gap-[0.4375rem]">
+            <Image src={man_woman} alt="worship image" />
+            <p className="text-B3_14_Regular text-g-200">
+              새가족 순은 새가족순장과 리더들로 이루어져 있습니다. 일반 순으로 등반하기 전 새가족
+              교육을 통해 교리를 배우고, 담당 목사님과의 면담을 통해 일반 순으로 배정됩니다.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
     </main>
   )
 }
