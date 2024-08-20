@@ -17,6 +17,7 @@ export const RecommendVideo = async () => {
               width={220}
               height={122}
               className="rounded-md"
+              style={{ width: 220, height: 122 }}
             />
           </a>
         </li>
