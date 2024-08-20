@@ -15,7 +15,9 @@ export const Main = () => {
   return (
     <main className="mt-[3.75rem] flex min-h-screen flex-col items-center gap-10 px-6">
       <SectionButtons />
+
       <Image src={organization} alt="organization image" />
+
       <Card className="w-full bg-gradient-to-b from-[#EFB29F] to-[#BB8282]">
         <CardHeader className="text-g-white">
           <CardTitle className="text-H2_26_Bold">청년부 예배</CardTitle>
@@ -35,12 +37,14 @@ export const Main = () => {
           </Button>
         </CardContent>
       </Card>
+
       <div className="flex w-full flex-col gap-6">
         <h3 className="text-H4_22_Bold">추천 영상</h3>
         <div className="overflow-x-scroll">
           <RecommendVideo />
         </div>
       </div>
+
       <div className="flex w-full flex-col gap-6">
         <Card className="bg-gradient-to-b from-[#9FB5EF] to-[#8292BB]">
           <CardHeader className="text-g-white">
@@ -54,6 +58,33 @@ export const Main = () => {
             </p>
           </CardContent>
         </Card>
+
+        <Card className="bg-gradient-to-b from-[#9FC9EF] to-[#829CBB]">
+          <CardHeader className="text-g-white">
+            <CardTitle className="text-H2_26_Bold">새가족순</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center gap-[0.4375rem]">
+            <Image src={man_woman} alt="worship image" />
+            <p className="text-B3_14_Regular text-g-200">
+              새가족 순은 새가족순장과 리더들로 이루어져 있습니다. 일반 순으로 등반하기 전 새가족
+              교육을 통해 교리를 배우고, 담당 목사님과의 면담을 통해 일반 순으로 배정됩니다.
+            </p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader className="text-g-white">
+            <CardTitle className="text-H2_26_Bold">새가족순</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center gap-[0.4375rem]">
+            <Image src={man_woman} alt="worship image" />
+            <p className="text-B3_14_Regular text-g-200">
+              새가족 순은 새가족순장과 리더들로 이루어져 있습니다. 일반 순으로 등반하기 전 새가족
+              교육을 통해 교리를 배우고, 담당 목사님과의 면담을 통해 일반 순으로 배정됩니다.
+            </p>
+          </CardContent>
+        </Card>
+
         <Card className="bg-gradient-to-b from-[#9FC9EF] to-[#829CBB]">
           <CardHeader className="text-g-white">
             <CardTitle className="text-H2_26_Bold">새가족순</CardTitle>
