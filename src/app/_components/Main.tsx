@@ -6,7 +6,7 @@ import organization from '../../../public/organization.png'
 import table_meeting from '../../../public/table_meeting.png'
 import worshipHand from '../../../public/worshipHand.png'
 
-import { SectionButtons } from '.'
+import { RecommendVideo, SectionButtons } from '.'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -16,7 +16,7 @@ export const Main = () => {
     <main className="mt-[3.75rem] flex min-h-screen flex-col items-center gap-10 px-6">
       <SectionButtons />
       <Image src={organization} alt="organization image" />
-      <Card className="bg-gradient-to-b from-[#EFB29F] to-[#BB8282]">
+      <Card className="w-full bg-gradient-to-b from-[#EFB29F] to-[#BB8282]">
         <CardHeader className="text-g-white">
           <CardTitle className="text-H2_26_Bold">청년부 예배</CardTitle>
         </CardHeader>
@@ -35,7 +35,13 @@ export const Main = () => {
           </Button>
         </CardContent>
       </Card>
-      <div className="flex flex-col gap-6">
+      <div className="flex w-full flex-col gap-6">
+        <h3 className="text-H4_22_Bold">추천 영상</h3>
+        <div className="overflow-x-scroll">
+          <RecommendVideo />
+        </div>
+      </div>
+      <div className="flex w-full flex-col gap-6">
         <Card className="bg-gradient-to-b from-[#9FB5EF] to-[#8292BB]">
           <CardHeader className="text-g-white">
             <CardTitle className="text-H2_26_Bold">순 모임</CardTitle>
