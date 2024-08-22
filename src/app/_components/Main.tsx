@@ -6,7 +6,7 @@ import organization from '../../../public/organization.png'
 import table_meeting from '../../../public/table_meeting.png'
 import worshipHand from '../../../public/worshipHand.png'
 
-import { MissionGroups, RecommendVideo, SectionButtons } from '.'
+import { RecommendVideo, SectionButtons } from '.'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
