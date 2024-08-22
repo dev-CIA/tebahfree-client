@@ -1,3 +1,5 @@
 export * from './Header'
 export * from './SectionButtons'
 export * from './Main'
+export * from './RecommendVideo'
+export * from './MissionGroups'
