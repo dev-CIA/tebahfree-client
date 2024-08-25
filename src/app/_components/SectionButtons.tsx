@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
@@ -25,7 +26,7 @@ export const SectionButtons = () => {
           onClick={() => {
             setSelectedBtn(value)
           }}>
-          {label}
+          <Link href={`#${value}`}>{label}</Link>
         </Button>
       ))}
     </div>
