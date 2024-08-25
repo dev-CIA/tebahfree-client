@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="kr" className={`${inter.variable} ${pretendard.variable} `}>
+    <html lang="kr" className={`${inter.variable} ${pretendard.variable} scroll-smooth`}>
       <body className={`${inter.className} ${pretendard.className}`}>{children}</body>
     </html>
   )
