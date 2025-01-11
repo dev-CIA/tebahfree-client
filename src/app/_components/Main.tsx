@@ -15,9 +15,9 @@ import {
 } from '.'
 
 import { Divider } from '@/components/divider'
+import { SectionLayout } from '@/components/section-layout'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { SectionLayout } from '@/components/section-layout'
 
 export const Main = () => {
   return (
