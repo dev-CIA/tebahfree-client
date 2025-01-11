@@ -1,14 +1,18 @@
 import Image from 'next/image'
 
+import { SectionLayout } from '@/components/section-layout'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { type SectionProps } from '@/types/section'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
-export const CommonInfoSection = () => {
+export const CommonInfoSection = ({ id }: SectionProps) => {
   return (
-    <div className="mb-6 flex w-full flex-col gap-6">
+    <SectionLayout id={id} type="info">
       <h3 className="text-H2_26_Bold text-g-black">자주 찾는 정보</h3>
       <div className="grid grid-cols-2 gap-4">
         <a href="https://gkwangsung.com/www.contents.asp?id=sub01_08_new">
-          <Card className="relative aspect-square border-g-300 bg-g-200 p-5">
+          <Card variant="mini">
             <CardHeader className="mb-2 px-0 py-0 text-b-navy">
               <CardTitle className="text-H6_18_Bold">오시는 길</CardTitle>
             </CardHeader>
@@ -27,57 +31,48 @@ export const CommonInfoSection = () => {
           </Card>
         </a>
         <a href="https://gkwangsung.com/www.contents.asp?id=sub01_04_new">
-          <Card className="relative aspect-square border-g-300 bg-g-200 p-5">
+          <Card variant="mini">
             <CardHeader className="mb-2 px-0 py-0 text-b-navy">
               <CardTitle className="text-H6_18_Bold">예배시간 안내</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <p className="text-B4_12_Regular text-t-400">예배시간을 확인하세요.</p>
+              <p className="whitespace-pre text-B4_12_Regular text-t-400">
+                5부 청년예배{'\n'}오후 2시 50분
+              </p>
             </CardContent>
             <Image
               src="/bottomInfo/time.png"
-              width={42}
-              height={42}
-              alt="오시는 길 이미지"
+              width={35}
+              height={35}
+              alt="시계 이미지"
               className="absolute bottom-5"
             />
           </Card>
         </a>
-        <Card className="relative aspect-square border-g-300 bg-g-200 p-5">
+
+        <Card variant="plane">
           <CardHeader className="mb-2 px-0 py-0 text-b-navy">
-            <CardTitle className="text-H6_18_Bold">새가족 안내</CardTitle>
+            <CardTitle className="text-H6_18_Bold">교회 소개</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
-            <p className="text-B4_12_Regular text-t-400">새가족을 환영합니다!</p>
+            <p className="whitespace-pre text-B4_12_Regular text-t-400">
+              예배가 살아있는 교회,{'\n'}은혜광성교회를 소개합니다!
+            </p>
+            <Button variant="third" size="xs" className="mt-5">
+              <Link href="https://gkwangsung.com" className="text-b-orange">
+                교회 홈페이지 보기
+              </Link>
+            </Button>
           </CardContent>
           <Image
-            src="/bottomInfo/computer.png"
-            width={48}
-            height={30}
+            src="/bottomInfo/church.png"
+            width={80}
+            height={60}
             alt="오시는 길 이미지"
-            className="absolute bottom-5"
+            className="absolute bottom-5 right-3"
           />
         </Card>
-        <a href="https://gkwangsung.com/index.asp">
-          <Card className="relative aspect-square border-g-300 bg-g-200 p-5">
-            <CardHeader className="mb-2 px-0 py-0 text-b-navy">
-              <CardTitle className="text-H6_18_Bold">교회 소개</CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <p className="whitespace-pre text-B4_12_Regular text-t-400">
-                은혜광성교회를{'\n'}소개합니다!
-              </p>
-            </CardContent>
-            <Image
-              src="/bottomInfo/church.png"
-              width={68}
-              height={51}
-              alt="오시는 길 이미지"
-              className="absolute bottom-5 left-[-0.075rem]"
-            />
-          </Card>
-        </a>
       </div>
-    </div>
+    </SectionLayout>
   )
 }
