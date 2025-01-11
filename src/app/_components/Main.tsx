@@ -6,7 +6,13 @@ import organization from '../../../public/organization.png'
 import table_meeting from '../../../public/table_meeting.png'
 import worshipHand from '../../../public/worshipHand.png'
 
-import { CommonInfoSection, MissionGroupSection, RecommendVideo, SectionButtons } from '.'
+import {
+  CommonInfoSection,
+  MissionGroupSection,
+  RecommendVideo,
+  SectionButtons,
+  UnendingWorshipSection,
+} from '.'
 
 import { Divider } from '@/components/divider'
 import { Button } from '@/components/ui/button'
@@ -83,9 +89,11 @@ export const Main = () => {
 
       <MissionGroupSection id="mission-groups" />
 
-      <Divider className="self-center" />
+      <Divider />
 
-      <Divider className="self-center" />
+      <UnendingWorshipSection id="unending" />
+
+      <Divider />
 
       <CommonInfoSection id="info" />
     </main>
