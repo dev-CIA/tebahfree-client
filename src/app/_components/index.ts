@@ -1,5 +1,6 @@
 export * from './header'
 export * from './main'
+export * from './footer'
 export * from './section-buttons'
 export * from './recommend-video'
 export * from './mission-groups'
