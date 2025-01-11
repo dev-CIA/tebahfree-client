@@ -1,4 +1,4 @@
-import { Header, Main, Footer } from './_components'
+import { Footer, Header, Main } from './_components'
 
 export default function Home() {
   return (

@@ -1,12 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 
 import { Badge } from '@/components/ui/badge'
-
-import { MISSION_GROUPS } from '@/constants/mission-groups'
-import { useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { MISSION_GROUPS } from '@/constants/mission-groups'
 
 export const MissionGroups = () => {
   const [groupCnt, setGroupCnt] = useState<number>(3)

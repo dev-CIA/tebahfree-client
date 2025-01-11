@@ -1,6 +1,7 @@
+import { MissionGroups } from './mission-groups'
+
 import { SectionLayout } from '@/components/section-layout'
 import { type SectionProps } from '@/types/section'
-import { MissionGroups } from './mission-groups'
 
 export const MissionGroupSection = ({ id }: SectionProps) => {
   return (
