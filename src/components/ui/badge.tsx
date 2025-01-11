@@ -1,9 +1,10 @@
 import clsx from 'clsx'
+import { ReactNode } from 'react'
 
 type BadgeProps = {
   className?: string
   variant?: string
-  children: string
+  children: ReactNode
 }
 
 export const Badge = ({ className, variant = 'default', children }: BadgeProps) => {
