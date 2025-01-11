@@ -6,50 +6,55 @@ import organization from '../../../public/organization.png'
 import table_meeting from '../../../public/table_meeting.png'
 import worshipHand from '../../../public/worshipHand.png'
 
-import { CommonInfoSection, RecommendVideo, SectionButtons } from '.'
+import { CommonInfoSection, MissionGroupSection, RecommendVideo, SectionButtons } from '.'
 
 import { Divider } from '@/components/divider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { SectionLayout } from '@/components/section-layout'
 
 export const Main = () => {
   return (
-    <main className="mt-[3.75rem] flex min-h-screen flex-col items-center gap-10 px-6">
+    <main className="mb-[1.875rem] mt-[3.75rem] flex min-h-dvh flex-col items-center gap-10">
       <SectionButtons />
 
-      <Image id="organization" src={organization} alt="organization image" />
+      <SectionLayout>
+        <div id="organization" className="relative flex aspect-[327/526] justify-center">
+          <Image src={organization} alt="organization image" fill />
+        </div>
 
-      <Card id="worship" className="w-full bg-gradient-to-b from-[#EFB29F] to-[#BB8282]">
-        <CardHeader className="text-g-white">
-          <CardTitle className="text-H2_26_Bold">청년부 예배</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-col items-center gap-[0.4375rem]">
-          <p className="text-B3_14_Regular text-g-200">
-            주일 오후 2시50분에 청년 1,2부가 모여서 함께 예배를 드립니다. 유튜브 테바프리 계정에
-            모든 예배 영상이 업로드 되어 지난 예배 영상도 볼 수 있습니다.
-          </p>
-          <Image src={worshipHand} alt="worship image" />
-          <Button asChild variant={'outline-transparent'} size={'lg'}>
-            <Link
-              href="https://www.youtube.com/@TEBAHFREE"
-              className="text-B1_18_Regular text-g-white">
-              예배 영상 보러가기
-            </Link>
-          </Button>
-        </CardContent>
-      </Card>
+        <Card id="worship" className="w-full bg-gradient-to-b from-[#EFB29F] to-[#BB8282]">
+          <CardHeader className="text-g-white">
+            <CardTitle className="text-H2_26_Bold">청년부 예배</CardTitle>
+          </CardHeader>
+          <CardContent className="flex flex-col items-center gap-[0.4375rem]">
+            <p className="text-B3_14_Regular text-g-200">
+              주일 오후 2시50분에 청년 1,2부가 모여서 함께 예배를 드립니다. 유튜브 테바프리 계정에
+              모든 예배 영상이 업로드 되어 지난 예배 영상도 볼 수 있습니다.
+            </p>
+            <Image src={worshipHand} alt="worship image" />
+            <Button asChild variant={'outline-transparent'} size={'lg'}>
+              <Link
+                href="https://www.youtube.com/@TEBAHFREE"
+                className="text-B1_18_Regular text-g-white">
+                예배 영상 보러가기
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
+      </SectionLayout>
 
-      <div className="flex w-full flex-col gap-6">
-        <h3 className="text-H4_22_Bold">추천 영상</h3>
+      <SectionLayout type="video">
+        <h3 className="px-6 text-H4_22_Bold">추천 영상</h3>
         <div className="overflow-x-scroll">
           <RecommendVideo />
         </div>
-      </div>
+      </SectionLayout>
 
       <Divider />
 
-      <div className="flex w-full flex-col gap-6">
-        <Card id="group" className="bg-gradient-to-b from-[#9FB5EF] to-[#8292BB]">
+      <SectionLayout type="info">
+        <Card id="groups" className="bg-gradient-to-b from-[#9FB5EF] to-[#8292BB]">
           <CardHeader className="text-g-white">
             <CardTitle className="text-H2_26_Bold">순 모임</CardTitle>
           </CardHeader>
@@ -74,29 +79,15 @@ export const Main = () => {
             </p>
           </CardContent>
         </Card>
+      </SectionLayout>
 
-        <Card id="missionGroup" className="border-0">
-          <CardHeader className="px-0 pb-4 text-g-black">
-            <CardTitle className="text-H2_26_Bold">선교 소모임</CardTitle>
-          </CardHeader>
-          <CardContent className="flex flex-col items-center px-0">
-            <p className="text-B3_14_Regular text-t-500">
-              선교소모임은 8개의 팀으로 구성되어 교회공동체를 벗어나 지역사회와 열방을 향해 나아갈
-              선교적 소명을 가진 공동체입니다. 각자의 소명과 재능을 발휘할 수 있는 팀에 소속되어
-              매달 네번째 주 예배 후에 선교소모임을 진행합니다.
-            </p>
-            {/* <hr className="my-6 h-[1px] w-full border-0 bg-g-400" /> */}
-          </CardContent>
-        </Card>
+      <MissionGroupSection id="mission-groups" />
 
-        <Divider className="self-center" />
+      <Divider className="self-center" />
 
-        <Divider className="self-center" />
+      <Divider className="self-center" />
 
-        <div id="info">
-          <CommonInfoSection />
-        </div>
-      </div>
+      <CommonInfoSection id="info" />
     </main>
   )
 }
