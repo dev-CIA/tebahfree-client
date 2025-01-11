@@ -8,6 +8,7 @@ import worshipHand from '../../../public/worshipHand.png'
 
 import { CommonInfoSection, RecommendVideo, SectionButtons } from '.'
 
+import { Divider } from '@/components/divider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -44,6 +45,8 @@ export const Main = () => {
           <RecommendVideo />
         </div>
       </div>
+
+      <Divider />
 
       <div className="flex w-full flex-col gap-6">
         <Card id="group" className="bg-gradient-to-b from-[#9FB5EF] to-[#8292BB]">
@@ -85,6 +88,10 @@ export const Main = () => {
             {/* <hr className="my-6 h-[1px] w-full border-0 bg-g-400" /> */}
           </CardContent>
         </Card>
+
+        <Divider className="self-center" />
+
+        <Divider className="self-center" />
 
         <div id="info">
           <CommonInfoSection />
