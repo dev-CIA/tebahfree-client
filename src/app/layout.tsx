@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kr" className={`${inter.variable} ${pretendard.variable} scroll-smooth`}>
-      <body className={`${inter.className} ${pretendard.className}`}>{children}</body>
+      <body className={`${inter.className} ${pretendard.className} bg-gray-100`}>
+        <div className="mx-auto min-w-[360px] max-w-[600px] bg-white">{children}</div>
+      </body>
     </html>
   )
 }
