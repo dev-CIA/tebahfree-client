@@ -28,11 +28,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const productionMode = process.env.NODE_ENV !== 'development'
+
   return (
     <html lang="kr" className={`${inter.variable} ${pretendard.variable} scroll-smooth`}>
       <body className={`${inter.className} ${pretendard.className} bg-gray-100`}>
         <div className="mx-auto min-w-[360px] max-w-[600px] bg-white">{children}</div>
       </body>
+      {productionMode && <GoogleAnalytics gaId={`${process.env.NEXT_PUBLIC_GA_ID}`} />}
     </html>
   )
 }
