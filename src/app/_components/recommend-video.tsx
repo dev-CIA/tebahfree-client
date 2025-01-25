@@ -8,7 +8,7 @@ export const RecommendVideo = async () => {
 
   return (
     <ul className="flex w-full flex-grow gap-3">
-      {videoList.map(({ snippet: { thumbnails, resourceId }, id }: PlayListItems) => (
+      {videoList?.map(({ snippet: { thumbnails, resourceId }, id }: PlayListItems) => (
         <li key={id} className="min-w-fit">
           <a href={`https://www.youtube.com/watch?v=${resourceId?.videoId}`}>
             <Image
