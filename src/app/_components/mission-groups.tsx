@@ -42,8 +42,8 @@ export const MissionGroups = () => {
         <p className="text-B3_14_Regular text-g-800">{groupCnt === 3 ? '더보기' : '접기'}</p>
         <Image
           src={`${groupCnt === 3 ? '/arrow-down.svg' : '/arrow-up.svg'}`}
-          alt={`${groupCnt === 3 ? '더보기 버튼' : '접기 버튼'}`}
-          width={21}
+          alt={''}
+          width={20}
           height={20}
         />
       </Button>
