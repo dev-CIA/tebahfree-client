@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [{ url: 'https://www.gksyouth.kr' }]
+  return [{ url: 'https://www.gksyouth.kr', lastModified: new Date() }]
 }
