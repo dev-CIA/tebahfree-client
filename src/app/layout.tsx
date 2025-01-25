@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     title: 'Tebah Free | 은혜광성교회 청년부',
     description: '은혜광성교회 청년부 Tebah free 공동체',
   },
+  verification: {
+    other: {
+      'naver-site-verification': '961ff14515f33bcc6e0bf37959ede036a231ad8d',
+    },
+  },
 }
 
 export default function RootLayout({
