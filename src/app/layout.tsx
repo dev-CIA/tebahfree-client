@@ -1,7 +1,9 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
 import type { Metadata } from 'next'
+
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })

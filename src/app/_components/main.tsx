@@ -26,7 +26,7 @@ export const Main = () => {
 
       <SectionLayout>
         <div id="organization" className="relative flex aspect-[327/526] justify-center">
-          <Image src={organization} alt="organization image" fill />
+          <Image src={organization} alt="organization image" fill sizes="(max-width: 600px)" />
         </div>
 
         <Card id="worship" className="w-full bg-gradient-to-b from-[#EFB29F] to-[#BB8282]">
